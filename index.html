@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Báo cáo phát triển kỹ năng viết Prompt hiệu quả trong học tập - Ngô Tuấn Minh - Trường Đại học Việt Nhật">
+    <title>Báo Cáo: Phát Triển Kỹ Năng Viết Prompt Hiệu Quả | Ngô Tuấn Minh</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Animated Background Particles -->
+    <canvas id="particles-canvas"></canvas>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#" class="nav-logo">
+                <span class="logo-icon">⚡</span>
+                <span class="logo-text">Prompt<span class="accent">Lab</span></span>
+            </a>
+            <div class="nav-links" id="nav-links">
+                <a href="#hero" class="nav-link active">Trang chủ</a>
+                <a href="#about" class="nav-link">Giới thiệu</a>
+                <a href="#tasks" class="nav-link">Tác vụ</a>
+                <a href="#prompts" class="nav-link">Prompt</a>
+                <a href="#comparison" class="nav-link">So sánh</a>
+                <a href="#tips" class="nav-link">Mẹo hay</a>
+                <a href="#conclusion" class="nav-link">Kết luận</a>
+            </div>
+            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="hero-bg-overlay"></div>
+        <div class="hero-content">
+            <div class="hero-badge animate-fade-in">
+                <span class="badge-dot"></span>
+                Trường Đại học Việt Nhật (VJU)
+            </div>
+            <h1 class="hero-title animate-fade-in-up">
+                Phát Triển Kỹ Năng Viết
+                <span class="gradient-text">Prompt Hiệu Quả</span>
+                Trong Học Tập
+            </h1>
+            <p class="hero-subtitle animate-fade-in-up delay-1">
+                Kỹ năng viết Prompt không chỉ là cách "hỏi" — mà là cách <em>"lập trình ngôn ngữ"</em> để tối ưu hóa trí tuệ nhân tạo.
+            </p>
+            <div class="hero-meta animate-fade-in-up delay-2">
+                <div class="meta-item">
+                    <span class="meta-icon">👤</span>
+                    <div>
+                        <span class="meta-label">Sinh viên</span>
+                        <span class="meta-value">Ngô Tuấn Minh</span>
+                    </div>
+                </div>
+                <div class="meta-divider"></div>
+                <div class="meta-item">
+                    <span class="meta-icon">🎓</span>
+                    <div>
+                        <span class="meta-label">Mã SV</span>
+                        <span class="meta-value">25112076</span>
+                    </div>
+                </div>
+                <div class="meta-divider"></div>
+                <div class="meta-item">
+                    <span class="meta-icon">🏫</span>
+                    <div>
+                        <span class="meta-label">Trường</span>
+                        <span class="meta-value">Đại học Việt Nhật</span>
+                    </div>
+                </div>
+            </div>
+            <a href="#tasks" class="hero-cta animate-fade-in-up delay-3">
+                <span>Khám Phá Ngay</span>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                    <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+            </a>
+        </div>
+        <div class="hero-image animate-fade-in delay-2">
+            <img src="images/hero.png" alt="AI Prompt Engineering">
+            <div class="hero-image-glow"></div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="scroll-mouse">
+                <div class="scroll-wheel"></div>
+            </div>
+            <span>Cuộn xuống</span>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section" id="about">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">📌 Giới thiệu</span>
+                <h2 class="section-title">Tổng quan <span class="gradient-text">Báo cáo</span></h2>
+                <p class="section-desc">Nghiên cứu thực nghiệm về cách viết Prompt hiệu quả, áp dụng vào 3 tác vụ học tập cụ thể tại Trường Đại học Việt Nhật.</p>
+            </div>
+            <div class="about-grid">
+                <div class="about-card glass-card">
+                    <div class="about-card-icon">🎯</div>
+                    <h3>Mục tiêu</h3>
+                    <p>Phân tích và so sánh hiệu quả giữa các cấp độ Prompt: Cơ bản, Cải tiến và Nâng cao trong bối cảnh học tập.</p>
+                </div>
+                <div class="about-card glass-card">
+                    <div class="about-card-icon">🔬</div>
+                    <h3>Phương pháp</h3>
+                    <p>Thực nghiệm trực tiếp trên các nền tảng AI, áp dụng các kỹ thuật Role Prompting, Chain-of-Thought và Few-shot Learning.</p>
+                </div>
+                <div class="about-card glass-card">
+                    <div class="about-card-icon">📊</div>
+                    <h3>Kết quả</h3>
+                    <p>Tiết kiệm đến 50% thời gian nghiên cứu tài liệu và ôn tập khi sử dụng Prompt nâng cao so với Prompt cơ bản.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tasks Section -->
+    <section class="section section-dark" id="tasks">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">📋 Phần 1</span>
+                <h2 class="section-title">3 Tác Vụ <span class="gradient-text">Học Tập</span></h2>
+                <p class="section-desc">Ba tác vụ học tập được lựa chọn để đánh giá hiệu quả của các kỹ thuật viết Prompt khác nhau.</p>
+            </div>
+            <div class="tasks-grid">
+                <!-- Task 1 -->
+                <div class="task-card glass-card">
+                    <div class="task-number">01</div>
+                    <div class="task-image">
+                        <img src="images/task1.png" alt="Tóm tắt tài liệu">
+                    </div>
+                    <div class="task-content">
+                        <div class="task-badge">Kiến trúc máy tính</div>
+                        <h3>Tóm tắt tài liệu học thuật chuyên ngành</h3>
+                        <p>Sử dụng AI để tóm tắt các bài đọc về kiến trúc máy tính, tập trung vào chip ARM và các khái niệm then chốt cho sinh viên năm nhất.</p>
+                        <div class="task-tags">
+                            <span class="tag">Role Prompting</span>
+                            <span class="tag">Summarization</span>
+                            <span class="tag">CNTT</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Task 2 -->
+                <div class="task-card glass-card">
+                    <div class="task-number">02</div>
+                    <div class="task-image">
+                        <img src="images/task2.png" alt="Deep Learning">
+                    </div>
+                    <div class="task-content">
+                        <div class="task-badge">Trí tuệ nhân tạo</div>
+                        <h3>Giải thích khái niệm phức tạp — Deep Learning</h3>
+                        <p>Ứng dụng phương pháp ẩn dụ (Analogy) và Chain-of-Thought để giải thích mạng thần kinh nhân tạo từ ví dụ đời thường đến lý thuyết chuyên sâu.</p>
+                        <div class="task-tags">
+                            <span class="tag">Chain-of-Thought</span>
+                            <span class="tag">Analogy</span>
+                            <span class="tag">AI/ML</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Task 3 -->
+                <div class="task-card glass-card">
+                    <div class="task-number">03</div>
+                    <div class="task-image">
+                        <img src="images/task3.png" alt="Quiz tự động">
+                    </div>
+                    <div class="task-content">
+                        <div class="task-badge">Giải tích</div>
+                        <h3>Tạo bộ câu hỏi ôn tập tự động</h3>
+                        <p>Tự động hóa việc tạo câu hỏi trắc nghiệm về Tích phân bội với đáp án và giải thích chi tiết, áp dụng kỹ thuật Few-shot Examples.</p>
+                        <div class="task-tags">
+                            <span class="tag">Few-shot</span>
+                            <span class="tag">Assessment</span>
+                            <span class="tag">Toán học</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Prompt Evolution Section -->
+    <section class="section" id="prompts">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">🚀 Phần 2</span>
+                <h2 class="section-title">Tiến Hóa Của <span class="gradient-text">Prompt</span></h2>
+                <p class="section-desc">Từ cơ bản đến nâng cao — mỗi cấp độ Prompt mang lại chất lượng đầu ra khác nhau rõ rệt.</p>
+            </div>
+
+            <div class="evolution-image">
+                <img src="images/evolution.png" alt="Quá trình tiến hóa Prompt">
+            </div>
+
+            <!-- Task 1 Prompts -->
+            <div class="prompt-group">
+                <div class="prompt-group-header">
+                    <div class="prompt-group-icon">📄</div>
+                    <div>
+                        <h3>Tác vụ 1: Tóm tắt bài đọc về Kiến trúc máy tính</h3>
+                        <p>So sánh 3 cấp độ Prompt cho tác vụ tóm tắt tài liệu</p>
+                    </div>
+                </div>
+                <div class="prompts-timeline">
+                    <div class="prompt-item level-basic">
+                        <div class="prompt-level">
+                            <span class="level-dot"></span>
+                            <span class="level-label">Cơ bản</span>
+                        </div>
+                        <div class="prompt-box glass-card">
+                            <div class="prompt-quote">"Hãy tóm tắt nội dung bài viết dưới đây."</div>
+                            <div class="prompt-analysis">
+                                <span class="analysis-badge bad">❌ Chung chung</span>
+                                <span class="analysis-badge bad">❌ Thiếu ngữ cảnh</span>
+                                <span class="analysis-badge bad">❌ Không định hướng</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="prompt-item level-improved">
+                        <div class="prompt-level">
+                            <span class="level-dot"></span>
+                            <span class="level-label">Cải tiến</span>
+                        </div>
+                        <div class="prompt-box glass-card">
+                            <div class="prompt-quote">"Tóm tắt bài viết này trong khoảng 200 từ, tập trung vào 3 ý chính về ưu điểm của chip ARM."</div>
+                            <div class="prompt-analysis">
+                                <span class="analysis-badge ok">✅ Có giới hạn độ dài</span>
+                                <span class="analysis-badge ok">✅ Có trọng tâm</span>
+                                <span class="analysis-badge warning">⚠️ Chưa có vai trò</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="prompt-item level-advanced">
+                        <div class="prompt-level">
+                            <span class="level-dot"></span>
+                            <span class="level-label">Nâng cao</span>
+                            <span class="technique-badge">Role Prompting</span>
+                        </div>
+                        <div class="prompt-box glass-card">
+                            <div class="prompt-quote">"Với vai trò là một giảng viên CNTT, hãy tóm tắt tài liệu này cho sinh viên năm nhất. Trình bày dưới dạng danh sách (bullet points) các khái niệm then chốt và giải thích ngắn gọn tại sao chúng quan trọng."</div>
+                            <div class="prompt-analysis">
+                                <span class="analysis-badge good">🌟 Có vai trò</span>
+                                <span class="analysis-badge good">🌟 Đối tượng rõ</span>
+                                <span class="analysis-badge good">🌟 Định dạng cụ thể</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Task 2 Prompts -->
+            <div class="prompt-group">
+                <div class="prompt-group-header">
+                    <div class="prompt-group-icon">🧠</div>
+                    <div>
+                        <h3>Tác vụ 2: Giải thích về "Học sâu" (Deep Learning)</h3>
+                        <p>Từ câu hỏi đơn giản đến Chain-of-Thought Prompting</p>
+                    </div>
+                </div>
+                <div class="prompts-timeline">
+                    <div class="prompt-item level-basic">
+                        <div class="prompt-level">
+                            <span class="level-dot"></span>
+                            <span class="level-label">Cơ bản</span>
+                        </div>
+                        <div class="prompt-box glass-card">
+                            <div class="prompt-quote">"Deep Learning là gì?"</div>
+                            <div class="prompt-analysis">
+                                <span class="analysis-badge bad">❌ Quá ngắn</span>
+                                <span class="analysis-badge bad">❌ Không có hướng dẫn</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="prompt-item level-improved">
+                        <div class="prompt-level">
+                            <span class="level-dot"></span>
+                            <span class="level-label">Cải tiến</span>
+                        </div>
+                        <div class="prompt-box glass-card">
+                            <div class="prompt-quote">"Giải thích Deep Learning là gì và so sánh nó với Machine Learning thông thường."</div>
+                            <div class="prompt-analysis">
+                                <span class="analysis-badge ok">✅ Yêu cầu so sánh</span>
+                                <span class="analysis-badge ok">✅ Có ngữ cảnh</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="prompt-item level-advanced">
+                        <div class="prompt-level">
+                            <span class="level-dot"></span>
+                            <span class="level-label">Nâng cao</span>
+                            <span class="technique-badge">Chain-of-Thought</span>
+                        </div>
+                        <div class="prompt-box glass-card">
+                            <div class="prompt-quote">"Hãy giải thích Deep Learning bằng phương pháp ẩn dụ (Analogy).<br><strong>Bước 1:</strong> Đưa ra một ví dụ đời thường.<br><strong>Bước 2:</strong> Liên hệ ví dụ đó với cách mạng thần kinh nhân tạo hoạt động.<br><strong>Bước 3:</strong> Kết luận về giá trị cốt lõi của nó."</div>
+                            <div class="prompt-analysis">
+                                <span class="analysis-badge good">🌟 Từng bước logic</span>
+                                <span class="analysis-badge good">🌟 Phương pháp ẩn dụ</span>
+                                <span class="analysis-badge good">🌟 Cấu trúc rõ ràng</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Task 3 Prompts -->
+            <div class="prompt-group">
+                <div class="prompt-group-header">
+                    <div class="prompt-group-icon">📝</div>
+                    <div>
+                        <h3>Tác vụ 3: Tạo bộ câu hỏi ôn tập môn Giải tích</h3>
+                        <p>Kỹ thuật Few-shot Examples mang lại kết quả chính xác nhất</p>
+                    </div>
+                </div>
+                <div class="prompts-timeline">
+                    <div class="prompt-item level-basic">
+                        <div class="prompt-level">
+                            <span class="level-dot"></span>
+                            <span class="level-label">Cơ bản</span>
+                        </div>
+                        <div class="prompt-box glass-card">
+                            <div class="prompt-quote">"Tạo câu hỏi ôn tập về Tích phân bội."</div>
+                            <div class="prompt-analysis">
+                                <span class="analysis-badge bad">❌ Không có định dạng</span>
+                                <span class="analysis-badge bad">❌ Không có số lượng</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="prompt-item level-improved">
+                        <div class="prompt-level">
+                            <span class="level-dot"></span>
+                            <span class="level-label">Cải tiến</span>
+                        </div>
+                        <div class="prompt-box glass-card">
+                            <div class="prompt-quote">"Tạo 5 câu hỏi trắc nghiệm về Tích phân kép kèm đáp án giải thích."</div>
+                            <div class="prompt-analysis">
+                                <span class="analysis-badge ok">✅ Số lượng cụ thể</span>
+                                <span class="analysis-badge ok">✅ Yêu cầu giải thích</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="prompt-item level-advanced">
+                        <div class="prompt-level">
+                            <span class="level-dot"></span>
+                            <span class="level-label">Nâng cao</span>
+                            <span class="technique-badge">Few-shot</span>
+                        </div>
+                        <div class="prompt-box glass-card">
+                            <div class="prompt-quote">"Hãy tạo 5 câu hỏi trắc nghiệm về Tích phân bội. Định dạng yêu cầu:<br>
+                            <strong>Câu hỏi:</strong> [Nội dung]<br>
+                            <strong>Các phương án:</strong> A, B, C, D<br>
+                            <strong>Đáp án đúng:</strong> [Đáp án]<br>
+                            <strong>Giải thích:</strong> [Giải thích logic giải bài]<br><br>
+                            <em>Ví dụ mẫu: Câu 1: Tính diện tích miền D... Đáp án A... Giải thích...</em><br>
+                            Hãy tiếp tục với các câu hỏi tương tự."</div>
+                            <div class="prompt-analysis">
+                                <span class="analysis-badge good">🌟 Có mẫu ví dụ</span>
+                                <span class="analysis-badge good">🌟 Định dạng chi tiết</span>
+                                <span class="analysis-badge good">🌟 Chuẩn hóa output</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Comparison Table Section -->
+    <section class="section section-dark" id="comparison">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">📊 Phần 3</span>
+                <h2 class="section-title">Bảng <span class="gradient-text">So Sánh</span> Hiệu Quả</h2>
+                <p class="section-desc">Tổng hợp đánh giá chất lượng đầu ra từ 3 cấp độ Prompt qua các tiêu chí khác nhau.</p>
+            </div>
+            <div class="table-wrapper glass-card">
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>Loại Prompt</th>
+                            <th>Chất lượng đầu ra</th>
+                            <th>Khả năng ứng dụng</th>
+                            <th>Phân tích lý do hiệu quả</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="row-basic">
+                            <td>
+                                <div class="level-cell">
+                                    <span class="level-indicator basic"></span>
+                                    <strong>Cơ bản</strong>
+                                </div>
+                            </td>
+                            <td>Chung chung, thiếu chiều sâu.</td>
+                            <td><span class="rating low">Thấp</span></td>
+                            <td>AI không có đủ ngữ cảnh nên phản hồi theo cách an toàn và sơ sài nhất.</td>
+                        </tr>
+                        <tr class="row-improved">
+                            <td>
+                                <div class="level-cell">
+                                    <span class="level-indicator improved"></span>
+                                    <strong>Cải tiến</strong>
+                                </div>
+                            </td>
+                            <td>Đi đúng hướng, đủ thông tin.</td>
+                            <td><span class="rating medium">Trung bình</span></td>
+                            <td>Có ràng buộc về độ dài và mục tiêu giúp AI tập trung hơn.</td>
+                        </tr>
+                        <tr class="row-advanced">
+                            <td>
+                                <div class="level-cell">
+                                    <span class="level-indicator advanced"></span>
+                                    <strong>Nâng cao</strong>
+                                </div>
+                            </td>
+                            <td>Chuyên nghiệp, đúng văn phong, dễ hiểu.</td>
+                            <td><span class="rating high">Rất cao</span></td>
+                            <td>Việc áp dụng <strong>Role</strong> (Vai trò) và <strong>Structure</strong> (Cấu trúc) giúp AI "đóng vai" chuyên gia, tạo ra nội dung phù hợp tối đa với người dùng.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Stats -->
+            <div class="stats-grid">
+                <div class="stat-card glass-card">
+                    <div class="stat-number" data-target="50">0</div>
+                    <div class="stat-unit">%</div>
+                    <div class="stat-label">Tiết kiệm thời gian nghiên cứu</div>
+                </div>
+                <div class="stat-card glass-card">
+                    <div class="stat-number" data-target="3">0</div>
+                    <div class="stat-unit">cấp độ</div>
+                    <div class="stat-label">Prompt được phân tích</div>
+                </div>
+                <div class="stat-card glass-card">
+                    <div class="stat-number" data-target="5">0</div>
+                    <div class="stat-unit">kỹ thuật</div>
+                    <div class="stat-label">Nguyên tắc viết Prompt</div>
+                </div>
+                <div class="stat-card glass-card">
+                    <div class="stat-number" data-target="3">0</div>
+                    <div class="stat-unit">tác vụ</div>
+                    <div class="stat-label">Thực nghiệm học tập</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tips Section -->
+    <section class="section" id="tips">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">💡 Phần 4</span>
+                <h2 class="section-title">Nguyên Tắc & <span class="gradient-text">Mẹo Hay</span></h2>
+                <p class="section-desc">5 nguyên tắc vàng được rút ra từ quá trình thực nghiệm để viết Prompt hiệu quả.</p>
+            </div>
+            <div class="tips-layout">
+                <div class="tips-image">
+                    <img src="images/tips.png" alt="5 nguyên tắc viết Prompt">
+                </div>
+                <div class="tips-list">
+                    <div class="tip-card glass-card">
+                        <div class="tip-number">01</div>
+                        <div class="tip-content">
+                            <h4>🎭 Xác định vai trò (Role)</h4>
+                            <p>Luôn bắt đầu bằng <code>"Bạn là một chuyên gia về..."</code>, <code>"Bạn là giáo viên..."</code>. Điều này giúp AI hiểu ngữ cảnh và điều chỉnh văn phong, độ sâu của phản hồi.</p>
+                        </div>
+                    </div>
+                    <div class="tip-card glass-card">
+                        <div class="tip-number">02</div>
+                        <div class="tip-content">
+                            <h4>🔍 Cụ thể hóa yêu cầu (Specificity)</h4>
+                            <p>Thay vì <code>"Làm giúp tôi"</code>, hãy nói <code>"Lập danh sách"</code>, <code>"Viết mã nguồn"</code>, <code>"Tạo bảng"</code>. Càng cụ thể, kết quả càng chính xác.</p>
+                        </div>
+                    </div>
+                    <div class="tip-card glass-card">
+                        <div class="tip-number">03</div>
+                        <div class="tip-content">
+                            <h4>📖 Cung cấp ngữ cảnh (Context)</h4>
+                            <p>Cho AI biết đối tượng đọc là ai — <em>sinh viên, trẻ em, hay chuyên gia</em> — để nhận được phản hồi phù hợp nhất.</p>
+                        </div>
+                    </div>
+                    <div class="tip-card glass-card">
+                        <div class="tip-number">04</div>
+                        <div class="tip-content">
+                            <h4>🧩 Chain-of-Thought</h4>
+                            <p>Yêu cầu AI <code>"suy nghĩ từng bước một"</code> (Think step by step) để tránh sai sót trong logic toán học hoặc lập trình.</p>
+                        </div>
+                    </div>
+                    <div class="tip-card glass-card">
+                        <div class="tip-number">05</div>
+                        <div class="tip-content">
+                            <h4>📋 Few-shot Examples</h4>
+                            <p>Đưa ra 1–2 mẫu kết quả bạn muốn để AI học theo định dạng đó. Kỹ thuật này đặc biệt hiệu quả khi cần đầu ra có cấu trúc chuẩn.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Screenshot Gallery Section -->
+    <section class="section section-dark" id="gallery">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">📸 Minh Họa</span>
+                <h2 class="section-title">Hình Ảnh <span class="gradient-text">Thực Nghiệm</span></h2>
+                <p class="section-desc">Ảnh chụp màn hình quá trình thực nghiệm với Gemini AI trên các tác vụ học tập.</p>
+            </div>
+            <div class="gallery-grid">
+                <div class="gallery-item glass-card">
+                    <div class="gallery-image">
+                        <img src="images/screenshot1.png" alt="Tác vụ 1: Tóm tắt tài liệu" onerror="this.parentElement.parentElement.style.display='none'">
+                    </div>
+                    <div class="gallery-caption">
+                        <h4>Tác vụ 1: Tóm tắt tài liệu chuyên ngành</h4>
+                        <p>Sử dụng Gemini AI để tóm tắt tài liệu học thuật với Role Prompting</p>
+                    </div>
+                </div>
+                <div class="gallery-item glass-card">
+                    <div class="gallery-image">
+                        <img src="images/screenshot2.png" alt="Tác vụ 2: Giải thích Deep Learning" onerror="this.parentElement.parentElement.style.display='none'">
+                    </div>
+                    <div class="gallery-caption">
+                        <h4>Tác vụ 2: Giải thích Deep Learning</h4>
+                        <p>Áp dụng Chain-of-Thought để giải thích mạng nơ-ron nhân tạo</p>
+                    </div>
+                </div>
+                <div class="gallery-item glass-card">
+                    <div class="gallery-image">
+                        <img src="images/screenshot3.png" alt="Tác vụ 3: Tạo câu hỏi ôn tập" onerror="this.parentElement.parentElement.style.display='none'">
+                    </div>
+                    <div class="gallery-caption">
+                        <h4>Tác vụ 3: Tạo bộ câu hỏi ôn tập tự động</h4>
+                        <p>Few-shot Examples tạo quiz trắc nghiệm Deep Learning</p>
+                    </div>
+                </div>
+                <div class="gallery-item glass-card">
+                    <div class="gallery-image">
+                        <img src="images/screenshot4.png" alt="Bảng so sánh" onerror="this.parentElement.parentElement.style.display='none'">
+                    </div>
+                    <div class="gallery-caption">
+                        <h4>Bảng so sánh hiệu quả Prompt</h4>
+                        <p>Đánh giá chất lượng đầu ra từ 3 cấp độ Prompt khác nhau</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Conclusion Section -->
+    <section class="section" id="conclusion">
+        <div class="container">
+            <div class="conclusion-card glass-card">
+                <div class="conclusion-icon">🎓</div>
+                <h2>Kết Luận</h2>
+                <div class="conclusion-divider"></div>
+                <p class="conclusion-text">
+                    Kỹ năng viết Prompt không chỉ là cách <strong>"hỏi"</strong>, mà là cách <strong>"lập trình ngôn ngữ"</strong> để tối ưu hóa trí tuệ nhân tạo. Việc làm chủ Prompt giúp tiết kiệm <span class="highlight-number">50%</span> thời gian nghiên cứu tài liệu và ôn tập tại VJU.
+                </p>
+                <div class="conclusion-highlights">
+                    <div class="highlight-item">
+                        <div class="highlight-icon">🎭</div>
+                        <span>Role Prompting tạo ngữ cảnh chuyên nghiệp</span>
+                    </div>
+                    <div class="highlight-item">
+                        <div class="highlight-icon">🧩</div>
+                        <span>Chain-of-Thought giảm sai sót logic</span>
+                    </div>
+                    <div class="highlight-item">
+                        <div class="highlight-icon">📋</div>
+                        <span>Few-shot chuẩn hóa đầu ra hiệu quả</span>
+                    </div>
+                </div>
+                <div class="conclusion-quote">
+                    <blockquote>
+                        "Prompt Engineering là kỹ năng thiết yếu của thế kỷ 21 — nơi ngôn ngữ trở thành công cụ lập trình mạnh mẽ nhất."
+                    </blockquote>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <div class="footer-logo">
+                        <span class="logo-icon">⚡</span>
+                        <span class="logo-text">Prompt<span class="accent">Lab</span></span>
+                    </div>
+                    <p>Báo cáo thực hiện bởi sinh viên Ngô Tuấn Minh — MSV: 25112075</p>
+                    <p>Trường Đại học Việt Nhật (VJU)</p>
+                </div>
+                <div class="footer-divider"></div>
+                <p class="footer-copyright">© 2025 Ngô Tuấn Minh | Trường Đại học Việt Nhật (VJU). Mọi quyền được bảo lưu.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to top button -->
+    <button class="back-to-top" id="backToTop" aria-label="Quay lại đầu trang">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="18 15 12 9 6 15"></polyline>
+        </svg>
+    </button>
+
+    <script src="script.js"></script>
+</body>
+</html>
